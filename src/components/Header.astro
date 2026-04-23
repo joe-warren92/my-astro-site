@@ -1,0 +1,36 @@
+---
+import { Image } from 'astro:assets';
+import Logo from '../assets/Logo.svg';
+---
+
+<section class="header">
+    <div class="container">
+        <a href="/"><Image src={Logo} class="logo" alt="Brand logo"/></a>
+        <nav id="nav-menu" class="nav-links">
+            <a href="/">Home</a>
+            <a href="/about">About</a>
+            <a href="/contact">Contact</a>
+        </nav>
+    </div>
+</section>
+
+<style>
+
+.header {
+    padding: 1.5rem;
+}
+.container {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+}
+
+
+nav > a {
+    color: black;
+    text-decoration: none;
+    margin-left: 1rem;
+}
+
+</style>
